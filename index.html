@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>USERS</title>
+  
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./modal.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./action.js"></script>
+  </head>
+
+  <body>
+    <div class="banner">
+      <h1>User List</h1>
+      <div id="loader" class="loader"></div>
+      
+      <select id="sortingOption" name="sortingOption" class="sorting-options">
+        <option value="lastName">Last Name</option>
+        <option value="zipcode">Zip Code</option>
+      </select>
+
+      <select id="sortType" name="sortType" class="sorting-options">
+        <option value="ascending">Ascending Order</option>
+        <option value="descending">Descending Order</option>
+      </select>
+
+      <button class="modal-toggle">Add New user</button>
+
+      <div id="users"></div>
+    </div>
+
+  
+    <div class="modal">
+      <div class="modal-overlay modal-toggle"></div>
+      <div class="modal-wrapper modal-transition">
+        <button class="modal-close modal-toggle">&#x2715</button>
+        <form id="userForm" action="https://jsonplaceholder.typicode.com/users" method="post">
+          <h1>Add New User</h1>
+          <div class="flexRow">
+            <div class="width50 flexRow input-banner">
+              <label class="width30" for="name">Name:</label>
+              <input type="text" id="name" name="name"><br>
+            </div>
+            <div class="width50 flexRow input-banner">
+              <label class="width30" for="email">Email:</label>
+              <input type="email" id="email" name="email"><br>
+            </div>
+          </div>
+
+          <div class="flexRow">
+            <div class="width50 flexRow input-banner">
+              <label class="width30" for="username">Username:</label>
+              <input type="text" id="username" name="username"><br>
+            </div>
+            <div class="width50 flexRow input-banner">
+              <label class="width30" for="street">Street:</label>
+              <input type="text" id="street" name="street"><br>
+            </div>
+          </div>
+
+
+          <div class="flexRow">
+            <div class="width50 flexRow input-banner">
+              <label class="width30" for="suite">Suite:</label>
+              <input type="text" id="suite" name="suite"><br>
+            </div>
+            <div class="width50 flexRow input-banner">
+              <label class="width30" for="city">City:</label>
+              <input type="text" id="city" name="city"><br>
+            </div>
+          </div>
+
+
+          <div class="flexRow">
+            <div class="width50 flexRow input-banner">
+              <label class="width30" for="zipcode">Zipcode:</label>
+              <input type="text" id="zipcode" name="zipcode"><br>
+            </div>
+            <div class="width50 flexRow input-banner">
+              <label class="width30" for="phone">Phone:</label>
+              <input type="text" id="phone" name="phone"><br>
+            </div>
+          </div>
+
+          <div class="flexRow">
+            <div class="width50 flexRow input-banner">
+              <label class="width30" for="lat">Lat:</label>
+              <input type="text" id="lat" name="lat"><br>
+            </div>
+            <div class="width50 flexRow input-banner">
+              <label class="width30" for="lng">Lng:</label>
+              <input type="text" id="lng" name="lng"><br>
+            </div>
+          </div>
+
+          <div class="flexRow">
+            <div class="width50 flexRow input-banner">
+              <label class="width30" for="website">Website:</label>
+              <input type="text" id="website" name="website"><br>
+            </div>
+            <div class="width50 flexRow input-banner">
+              <label class="width30" for="companyName">Company Name:</label>
+              <input type="text" id="companyName" name="companyName"><br>
+            </div>
+          </div>
+
+          <div class="flexRow">
+            <div class="width50 flexRow input-banner">
+              <label class="width30" for="catchPhrase">Company Catch Phrase:</label>
+              <input type="text" id="catchPhrase" name="catchPhrase"><br>
+            </div>
+            <div class="width50 flexRow input-banner">
+              <label class="width30" for="bs">Company bs:</label>
+              <input type="text" id="bs" name="bs"><br>
+            </div>
+          </div>
+
+
+
+          <input type="submit" value="Submit">
+        </form> 
+      </div>
+    </div>
+  </body>
+</html>
